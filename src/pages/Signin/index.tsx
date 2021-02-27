@@ -15,7 +15,7 @@ const SignIn: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text> LOGIN</Text>
+      <Text> Fazer login</Text>
       <Button title="Sign in" onPress={handleSignIn}></Button>
     </View>
   );
