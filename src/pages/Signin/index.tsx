@@ -1,12 +1,22 @@
-import { NavigationContainer } from "@react-navigation/native";
-import React from "react";
+import React, { useContext } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
+import { signIn } from "../../services/auth";
+
+import AuthContext from "../../contexts/auth";
 
 const SignIn: React.FC = () => {
+  const { signed, signIn } = useContext(AuthContext);
+
+  console.log(signed);
+
+  async function handleSignIn() {
+    signIn();
+  }
+
   return (
     <View style={styles.container}>
-      <Text> Fazer login! </Text>
-      <Button title="Sign in" onPress={() => {}}></Button>
+      <Text> LOGIN</Text>
+      <Button title="Sign in" onPress={handleSignIn}></Button>
     </View>
   );
 };
